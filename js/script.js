@@ -3,7 +3,7 @@ $(document).ready(function(){
 // init controller
 var controller = new ScrollMagic.Controller();
 // create a scene
-new ScrollMagic.Scene({triggerElement: ".project_1"})
+new ScrollMagic.Scene({triggerElement: ".project_1", offset: -150})
 					.setClassToggle(".project_1", "fade-in") // add class toggle
 					.addTo(controller);
 	new ScrollMagic.Scene({triggerElement: ".project_2", offset: -150})
