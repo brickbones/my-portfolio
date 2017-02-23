@@ -18,9 +18,21 @@ new ScrollMagic.Scene({triggerElement: ".project_1", offset: -150})
 	new ScrollMagic.Scene({triggerElement: ".project_4", offset: -150})
 					.setClassToggle(".project_4", "fade-in") // add class toggle
 					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: ".project_5", offset: -150})
+					.setClassToggle(".project_5", "fade-in") // add class toggle
+					.addTo(controller);
 
-$('.portfolio-wrapper').click(function(){
-	$('.modal').fadeIn();
+$('.about-me a').click(function(){
+	$('.modal.jota').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+
+$('.portfolio-wrapper.project_1').click(function(){
+	$('.modal.lecker').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+$('.portfolio-wrapper.project_2').click(function(){
+	$('.modal.mindful').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
 

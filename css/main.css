@@ -28,11 +28,12 @@
 .my-photo {
   text-align: center;
 }
-.my-photo img {
+.my-photo img, .jota img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -ms-border-radius: 50%;
   border: solid #e9e9e9 2px;
+  padding: 0;
 }
 .my-details h2 {
   font-size: 30px;
@@ -100,6 +101,28 @@
   color: #666;
   line-height: 1.7;
 }
+.about-me a{
+  color: #d44d00;
+  text-decoration: none;
+  transition: .3s;
+  display: inline-block;
+}
+.about-me a:after{
+  content:'';
+  height: 2px;
+  width: 0%;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  transition: .3s;
+}
+.about-me a:hover{
+  color: #000;
+}
+.about-me a:hover:after{
+  width: 100%;
+}
+
 .portfolio-wrapper{
   margin: 0 0 80px 0;
 }
@@ -150,7 +173,7 @@
 .reverse{
   flex-direction: row-reverse !important;
 }
-.project_1, .project_2,.project_3, .project_4{
+.project {
   opacity: 0;
   transition: .5s;
   position: relative;
@@ -197,7 +220,7 @@
 }
 .modal img{
   width: 100%;
-  margin: 20px 0;
+  padding-bottom: 40px;
 }
 .modal p{
   margin: 50px 0;
@@ -220,25 +243,26 @@
   margin: 20px 0;
 }
 
-.modal a.close-btn{
+.modal span.close-btn{
   padding: 15px 25px;
   background: white;
   font-size: 30px;
-  border-bottom: 1px solid #cfcfcf;
   display: block;
   right: 0;
   top: 0;
   position: relative;
   text-decoration: none;
-  color: #777;
+  color: #fff;
   text-align: center;
   transition: .3s;
-}
-.modal a.close-btn:hover {
+  cursor: pointer;
   background: #333;
+}
+.modal span.close-btn:hover {
+  background: #717171;
   color: #fff;
 }
-.modal a.close-btn:before {
+.modal span.close-btn:before {
   content: '\f104';
   margin-right: 5px;
   font-family: 'FontAwesome';
@@ -246,6 +270,7 @@
 .modal-wrapper{
   max-width: 1070px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 .apps{
   display: -webkit-box;
@@ -257,6 +282,17 @@
 }
 .apps li{
   padding: 15px;
+}
+.jota img{
+  max-width: 140px;
+  padding: 0;
+  margin: 60px 0 0 0;
+}
+.jota {
+  text-align: center;
+}
+.jota .modal-cotent{
+  padding: 0 25%;
 }
 /* Responsive code --------------------------------------------------- */
 
@@ -287,6 +323,9 @@
   justify-content: center;
   align-items: center;
   max-width: 80%;
+}
+.jota .modal-cotent{
+  padding: 0 10%;
 }
 
 }/* /800px */
