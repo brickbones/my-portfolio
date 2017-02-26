@@ -101,13 +101,13 @@
   color: #666;
   line-height: 1.7;
 }
-.about-me a{
+.about-me a, footer p a{
   color: #d44d00;
   text-decoration: none;
   transition: .3s;
   display: inline-block;
 }
-.about-me a:after{
+.about-me a:after, footer p a:after{
   content:'';
   height: 2px;
   width: 0%;
@@ -116,10 +116,10 @@
   margin: 0 auto;
   transition: .3s;
 }
-.about-me a:hover{
+.about-me a:hover, footer p a:hover{
   color: #000;
 }
-.about-me a:hover:after{
+.about-me a:hover:after, footer p a:hover:after{
   width: 100%;
 }
 
@@ -142,11 +142,13 @@
 }
 .project-details {
   width: 70%;
+  padding: 15px 0;
 }
 .project-title {
   font-size: 36px;
   color: #333;
   margin-bottom: 24px;
+  transition: .3s;
 }
 .project-details p, .modal-cotent p {
   font-size: 16px;
@@ -220,7 +222,7 @@
 }
 .modal img{
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 .modal p{
   margin: 50px 0;
@@ -246,7 +248,7 @@
 .modal span.close-btn{
   padding: 15px 25px;
   background: white;
-  font-size: 30px;
+  font-size: 20px;
   display: block;
   right: 0;
   top: 0;
@@ -272,16 +274,19 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+.modal-wrapper h1{
+  font-size: 50px;
+}
 .apps{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
   color: #666;
+  font-size: 22px;
 }
 .apps li{
-  padding: 15px;
+  padding: 35px 25px 0 0;
 }
 .jota img{
   max-width: 140px;
@@ -293,6 +298,95 @@
 }
 .jota .modal-cotent{
   padding: 0 25%;
+}
+.side-image{
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 15px;
+}
+.small-portfolio .portfolio-image-wrapper{
+  margin: 15px 30px 15px 0;
+}
+.small-portfolio.portfolio-wrapper{
+  margin: 0;
+}
+.small-portfolio > :last-child{
+  margin: 15px 0px 15px 0;
+}
+.small-portfolio .portfolio-image-wrapper p {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px 10px;
+  background: #fff;
+  display: block;
+  font-size: 18px;
+  transition: .3s;
+}
+footer {
+  margin: 60px 0;
+  text-align: center;
+}
+footer p{
+  margin: 30px auto;
+  color: #666
+}
+footer li{
+  display: flex;
+  justify-content: center;
+}
+.js-icon img{
+  width: 22px;
+}
+
+/* Tooltip */
+.apps li[data-tooltip] {
+  position: relative;
+}
+.apps li[data-tooltip]::before,
+.apps li[data-tooltip]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
+}
+.apps li[data-tooltip]::before {
+  content: attr(data-tooltip);
+  background: #666;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+}
+.apps li[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+}
+.apps li[data-tooltip]:hover::before,
+.apps li[data-tooltip]:hover::after {
+  display: block;
+}
+/* bottom tooltip */
+.apps li[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+.apps li[data-tooltip][data-placement="bottom"]::after {
+  border-bottom-color: #666;
+  border-top: none;
+  top: 100%;
+  left: 5px;
+  margin-top: 4px;
 }
 /* Responsive code --------------------------------------------------- */
 
