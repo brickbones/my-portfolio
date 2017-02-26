@@ -287,6 +287,11 @@
 }
 .apps li{
   padding: 35px 25px 0 0;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 .jota img{
   max-width: 140px;
@@ -340,7 +345,7 @@ footer li{
   display: flex;
   justify-content: center;
 }
-.js-icon img{
+.custom-icon img{
   width: 22px;
 }
 
