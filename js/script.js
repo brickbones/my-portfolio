@@ -48,6 +48,18 @@ $('.portfolio-wrapper.project_5').click(function(){
 	$('.modal.physmedi').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
+$('.portfolio-wrapper .project_6').click(function(){
+	$('.modal.riverlanes').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+$('.portfolio-wrapper .project_7').click(function(){
+	$('.modal.countrysmokes').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+$('.portfolio-wrapper .project_8').click(function(){
+	$('.modal.cali-lingual').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
 
 $('.close-btn').click(function(){
 	$('.modal').fadeOut();
@@ -82,7 +94,7 @@ $( ".small-portfolio .portfolio-image-wrapper" ).hover(
 
 
 
-$(".social-icons a[href^='https://'], .social-icons a[href^='http://'] ").attr("target","_blank");
+$(".social-icons a[href^='https://'], .social-icons a[href^='http://'], .modal-wrapper a[href^='http://'] ").attr("target","_blank");
 
 
 
