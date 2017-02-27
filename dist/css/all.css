@@ -500,6 +500,10 @@ footer li{
   padding: 0 10%;
 }
 
+.small-portfolio .portfolio-image-wrapper{
+  margin: 15px 0 15px 0;
+}
+
 }/* /800px */
 
 /* http://meyerweb.com/eric/tools/css/reset/
