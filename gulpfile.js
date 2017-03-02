@@ -7,6 +7,8 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var uglifycss = require('gulp-uglifycss');
 var imagemin = require('gulp-imagemin');
+var PngCrush = require('pngcrush'),
+    myCrusher = new PngCrush(['-res', 300, '-rle']);
 
 // Minify CSS
 gulp.task('css', function () {
@@ -31,15 +33,20 @@ gulp.task('scripts', function() {
 });
 
 //optimize images
-gulp.task('jpgs', function() {
-    return gulp.src('img/**/*')
-    .pipe(imagemin({ progressive: true }))
-    .pipe(gulp.dest('dist/img'));
+gulp.task('jpgs', function () {
+  return gulp.src('img/**/*', {base: './img'})
+  .pipe(imagemin({
+    verbose: true,
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    use: [PngCrush()]
+  }))
+  .pipe(gulp.dest('dist/img'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
+    gulp.watch('js/*.js', ['scripts']);
     gulp.watch('css/*.css', ['css']);
 });
 

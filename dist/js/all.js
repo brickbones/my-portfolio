@@ -28,6 +28,9 @@ new ScrollMagic.Scene({triggerElement: ".project_1", offset: -150})
 	new ScrollMagic.Scene({triggerElement: ".project_5", offset: -150})
 					.setClassToggle(".project_5", "fade-in") // add class toggle
 					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: ".project_9", offset: -150})
+					.setClassToggle(".project_9", "fade-in") // add class toggle
+					.addTo(controller);
 
 $(document).ready(function(){
 
@@ -56,16 +59,20 @@ $('.portfolio-wrapper.project_5').click(function(){
 	$('.modal.physmedi').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper .project_6').click(function(){
+$('.portfolio-wrapper.project_6').click(function(){
 	$('.modal.riverlanes').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper .project_7').click(function(){
+$('.portfolio-wrapper.project_7').click(function(){
 	$('.modal.countrysmokes').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper .project_8').click(function(){
+$('.portfolio-wrapper.project_8').click(function(){
 	$('.modal.cali-lingual').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+$('.portfolio-wrapper.project_9').click(function(){
+	$('.modal.goya').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
 
