@@ -51,20 +51,20 @@ $('.portfolio-wrapper.project_5').click(function(){
 	$('.modal.physmedi').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper.project_6').click(function(){
+$('.portfolio-wrapper.project_9').click(function(){
+	$('.modal.goya').fadeIn();
+	$('body').css('overflow-y', 'hidden');
+});
+$('.portfolio-wrapper .project_6').first().click(function(){
 	$('.modal.riverlanes').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper.project_7').click(function(){
+$('.portfolio-wrapper .project_7').click(function(){
 	$('.modal.countrysmokes').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
-$('.portfolio-wrapper.project_8').click(function(){
+$('.portfolio-wrapper .project_8').click(function(){
 	$('.modal.cali-lingual').fadeIn();
-	$('body').css('overflow-y', 'hidden');
-});
-$('.portfolio-wrapper.project_9').click(function(){
-	$('.modal.goya').fadeIn();
 	$('body').css('overflow-y', 'hidden');
 });
 
